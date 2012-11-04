@@ -3,21 +3,20 @@
 #include "fgetname.h"
 
 int main(int argc, char **argv) {
-	FILE *stream = fopen("fgetname.c", "r");
-	char name[64];
-	if(!stream) {
-		fprintf(stderr, "run the test in the source directory\n");
-		return 1;
-	}
-
-	while(fgetname(name, sizeof(name), stream))
-		printf("%s ", name);
-
-	printf("\n");
-	fclose(stream);
-
-	return 0;
+FILE *stream = fopen("fgetname.c", "r");
+char name[64];
+if(!stream) {
+fprintf(stderr, "run the test in the source directory\n");
+return 1;
 }
 
-	
+while(fgetname(name, sizeof(name), stream))
+printf("%s ", name);
+
+printf("\n");
+fclose(stream);
+
+return 0;
+}
+
 

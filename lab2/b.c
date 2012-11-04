@@ -4,9 +4,8 @@
    if(argc>1)
      printf("%s", argv[1]);
    else
-     foo();
-   printf("\n");
- 
+     foo();   /* love **/
+   printf("/n");
+
    return 0;
  }
-
