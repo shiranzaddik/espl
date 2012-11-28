@@ -1,0 +1,11 @@
+ 
+#include <stdio.h>
+#include <stdlib.h>
+
+int malami(char* a){
+  return atoi(a);
+}
+
+int main() {
+  return malami('17');
+}
