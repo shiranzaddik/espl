@@ -1,0 +1,44 @@
+extern createNewFiles
+
+section .text
+	global main
+	global open
+
+main:
+	push	ebp
+	mov	ebp, esp
+	
+	mov ebx, [ebp+8]   ;argc
+	sub ebx, 1         ;argc-1
+	mov ecx, ebp     
+	add ecx, 12        ;&argv
+	sal ebx, 2         ;(argc-1)*4
+	add ecx, ebx       ;&argv+((argc-1)*4)
+	mov ecx, [ecx]     ;filename
+	
+	
+	mov  eax, ecx      ;insert filename
+        push eax           ;
+	call fopen         ;call fopen
+	
+	mov  eax, ecx      ;insert filename
+        push eax           ;
+	call createNewFiles;call createNewFiles
+	
+	mov esp, ebp
+	pop ebp
+	ret
+	
+open:
+	mov edx, [esp+12]
+	mov ecx, [esp+8]
+	mov ebx, [esp+4]
+	mov eax, 5
+	int 0x80
+	ret
+	
+section .data
+	buffer resb 2
+	mov buffer, "r"
+	
+	
