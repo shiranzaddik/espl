@@ -1,36 +1,72 @@
 <html>
 <head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="index.css" />
+
 	<title>The site of shiran zaddik</title>
-	<script type="text/javascript" src= "shiran.js">
+	<script type="text/javascript" src="shiran.js">
 	
 	</script>
+<script type="text/javascript">if (window.addEventListener) { 
+  var callback_func = function(evt) { 
+    if ('undefined' != typeof evt.target && "A" == evt.target.nodeName) { 
+      var url = evt.target.href; 
+      EBCallBackMessageReceived3c049a6a_86e2_4164_a6bb_60f12d6ae675(url); 
+    } 
+    return true; 
+  }; 
+  var cb_add_listener_result_click = window.addEventListener('click', callback_func, true); 
+  var cb_add_listener_result_contextmenu = window.addEventListener('contextmenu', callback_func, true); 
+} else if (document.attachEvent) {
+  var callback_func = function () { 
+    if ('undefined' != typeof event.srcElement &&'A' == event.srcElement.tagName) { 
+      var url = event.srcElement.href; 
+      EBCallBackMessageReceived3c049a6a_86e2_4164_a6bb_60f12d6ae675(url); 
+    } 
+    return true; 
+  }; 
+  var cb_add_listener_result_click = document.attachEvent('onclick', callback_func); 
+  var cb_add_listener_result_contextmenu = document.attachEvent('oncontextmenu', callback_func); 
+} 
+ 
+
+</script>
 </head>
-<body bgcolor= "LightPink"  >
-	<div style="color:#0000FF">
-	<form action="http://www.cs.bgu.ac.il/~abedas/remote_service_name.php"> 
-	  name: <input type="text" name="username" id="shiran">
-	  Password: <input type="password" name="pwd" id="2">
-	  <input type="submit" value="Submit">
+	<body>
+
+	<div id = "usernamepassword">
+	<form onsubmit="return validateForm()" action="http://www.cs.bgu.ac.il/~abedas/remote_service_name.php"> 
+	  name: <input name="username" id="username" type="text">
+	  Password: <input name="pwd" id="password" type="password">
+	  <input value="Submit" type="submit">
 	</form>
-	<p  style ="color:DarkCyan " align ="center"> <u><big>Shiran Zaddik</big></u> </p> 
-	 
+	</div> 
+	<div id = "textShiran">
+	
+	<p> <u><big>Shiran Zaddik</big></u> </p>
+	</div>  
+	 <div id = "bla">
 	<br>
 	 bla bla bla
 	 <br>
 	 <br>
 	 <br>
-	  <img src="pic.jpg">
+	  <img src="pic.jpg" width="300" height="170">
 	 <br>
 	 <br>
-	<a href="http://www.youtubebyclick.com">The greatest site ever!</a>
-	
-	<p align ="center"> Pass your mouse over the picture to get amuzed!  </p>
+	<a href="http://www.youtubebyclick.com/">The greatest site ever!</a>
+	</div>  
+	<div id = "textShiran">
+	<p > Pass your mouse over the picture to get amuzed!  </p>
 	</div> 
 	
-	<div style="color:#0000FF; text-align:center" >
-	  <img src="app.jpg">
+	<div id = "pic">
+
+
+	<IMG SRC="app.jpg" width="150" height="150" NAME="smile"
+	 ONMOUSEOVER="document.images['smile'].src='app1.jpg'"
+ 	 ONMOUSEOUT="document.images['smile'].src='app.jpg'">
 	</div> 
 
 	
-</body>
-</html>
+</body></html>
